@@ -16,7 +16,7 @@ module.exports.run = async function({ api, event, args }) {
   const input = args.join(' ');
   
   if (!input) {
-    api.sendMessage(` 卂丁 卂凵丅口乃口丅
+    api.sendMessage(`卂凵丅口乃口丅
 
 ━━━━━━━━━━━━━━━
 
@@ -30,7 +30,7 @@ module.exports.run = async function({ api, event, args }) {
   try {
     const { data } = await axios.get(`https://openaikey-x20f.onrender.com/api?prompt=${encodeURIComponent(input)}`);
     let response = data.response;
-    response += "\n\n🤖 Autobot create by: AJ CHICANO";
+    response += "\n\n🤖 Autobot create by: JL Magno";
     api.sendMessage(response, event.threadID, event.messageID);
   } catch (error) {
     api.sendMessage('An error occurred while processing your request.', event.threadID, event.messageID);
